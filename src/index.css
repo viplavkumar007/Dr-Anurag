@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-slate-700 bg-white;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  ::selection {
+    @apply bg-sky-200 text-navy-800;
+  }
+}
+
+@layer components {
+  /* ── Glossy Primary Button ── */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-semibold text-white text-sm overflow-hidden;
+    background: linear-gradient(135deg, #1a3c6e 0%, #0ea5e9 100%);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  }
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-200;
+    background: linear-gradient(135deg, #0f2035 0%, #0284c7 100%);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(14, 165, 233, 0.45), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .btn-primary:hover::before { @apply opacity-100; }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-primary span { @apply relative z-10; }
+
+  /* ── WhatsApp Button ── */
+  .btn-whatsapp {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-semibold text-white text-sm overflow-hidden;
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  }
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+  }
+  .btn-whatsapp:active { transform: translateY(0); }
+
+  /* ── Outline Button ── */
+  .btn-outline {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-semibold text-medical-blue text-sm border-2 border-medical-blue overflow-hidden;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  }
+  .btn-outline:hover {
+    @apply bg-medical-blue text-white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 60, 110, 0.25);
+  }
+  .btn-outline:active { transform: translateY(0); }
+
+  /* ── Glass Card ── */
+  .glass-card {
+    @apply rounded-3xl border border-white/60;
+    background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(240,247,255,0.88) 100%);
+    box-shadow: 0 4px 24px rgba(26, 60, 110, 0.08), inset 0 1px 0 rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  .glass-card:hover {
+    transform: translateY(-6px) rotate3d(1,1,0,1deg);
+    box-shadow: 0 20px 48px rgba(26, 60, 110, 0.16), inset 0 1px 0 rgba(255,255,255,0.9);
+    @apply border-sky-200/80;
+  }
+
+  /* ── Service Card ── */
+  .service-card {
+    @apply rounded-3xl border border-white/60 p-6 flex flex-col gap-4;
+    background: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(240,247,255,0.9) 100%);
+    box-shadow: 0 2px 20px rgba(26, 60, 110, 0.07), inset 0 1px 0 rgba(255,255,255,0.9);
+    transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(26, 60, 110, 0.15);
+    @apply border-sky-300/60;
+  }
+
+  /* ── Section Container ── */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Section Label ── */
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-medical-sky mb-3;
+  }
+
+  /* ── Icon Badge ── */
+  .icon-badge {
+    @apply flex items-center justify-center w-14 h-14 rounded-2xl;
+    background: linear-gradient(135deg, rgba(14,165,233,0.12) 0%, rgba(6,182,212,0.15) 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 8px rgba(14,165,233,0.15);
+  }
+
+  /* ── Input Field ── */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white/80 text-slate-800 text-sm placeholder-slate-400 outline-none transition-all duration-200;
+    box-shadow: 0 1px 4px rgba(26,60,110,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+  }
+  .form-input:focus {
+    @apply border-sky-400;
+    box-shadow: 0 0 0 3px rgba(14,165,233,0.15), 0 1px 4px rgba(26,60,110,0.06);
+  }
+
+  /* ── Floating WhatsApp ── */
+  .float-wa {
+    @apply fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full text-white shadow-lg;
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    animation: pulse_glow 2.5s ease-in-out infinite;
+    transition: transform 0.2s;
+  }
+  .float-wa:hover { transform: scale(1.1); }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #1a3c6e 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-mint {
+    background: linear-gradient(135deg, #059669 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-medical-pattern {
+    background-image: radial-gradient(circle at 20% 20%, rgba(14,165,233,0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(26,60,110,0.05) 0%, transparent 50%);
+  }
+  .glossy-border {
+    border: 1px solid rgba(255,255,255,0.6);
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-medical-gray; }
+::-webkit-scrollbar-thumb { @apply bg-sky-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-sky-400; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
