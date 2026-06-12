@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Services from './components/sections/Services'
+import Gallery from './components/sections/Gallery'
 import WhyChoose from './components/sections/WhyChoose'
 import Testimonials from './components/sections/Testimonials'
 import Blog from './components/sections/Blog'
@@ -35,6 +36,7 @@ export default function App() {
         <Hero />
         <About />
         <Services />
+        <Gallery />
         <WhyChoose />
         <Testimonials />
         <Blog />

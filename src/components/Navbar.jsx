@@ -8,6 +8,7 @@ import { useScrollSpy } from '../hooks/useScrollSpy'
 const NAV_LINKS = [
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
+  { id: 'gallery', label: 'Gallery' },
   { id: 'why-us', label: 'Why Us' },
   { id: 'blog', label: 'Blog' },
   { id: 'contact', label: 'Contact' },
@@ -17,6 +18,7 @@ export default function Navbar() {
   const scrolled = useScrollBlur(20)
   const activeId = useScrollSpy(NAV_LINKS.map((l) => l.id))
   const [open, setOpen] = useState(false)
+  const onHero = !scrolled
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -49,10 +51,18 @@ export default function Navbar() {
               <Brain size={20} />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-base text-medical-blue tracking-tight">
+              <span
+                className={`font-display font-bold text-base tracking-tight transition-colors ${
+                  onHero ? 'text-white' : 'text-medical-blue'
+                }`}
+              >
                 {brand.name}
               </span>
-              <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-medical-sky">
+              <span
+                className={`text-[10px] font-semibold tracking-[0.15em] uppercase transition-colors ${
+                  onHero ? 'text-sky-200' : 'text-medical-sky'
+                }`}
+              >
                 {brand.tagline}
               </span>
             </div>
@@ -66,15 +76,21 @@ export default function Navbar() {
                 onClick={() => scrollTo(link.id)}
                 className={`relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   activeId === link.id
-                    ? 'text-medical-blue bg-sky-50'
-                    : 'text-slate-600 hover:text-medical-blue hover:bg-slate-50'
+                    ? onHero
+                      ? 'text-white bg-white/12'
+                      : 'text-medical-blue bg-sky-50'
+                    : onHero
+                      ? 'text-sky-100 hover:text-white hover:bg-white/10'
+                      : 'text-slate-600 hover:text-medical-blue hover:bg-slate-50'
                 }`}
               >
                 {link.label}
                 {activeId === link.id && (
                   <motion.span
                     layoutId="activeNav"
-                    className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-medical-sky"
+                    className={`absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full ${
+                      onHero ? 'bg-sky-200' : 'bg-medical-sky'
+                    }`}
                   />
                 )}
               </button>
@@ -85,7 +101,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={`tel:${brand.phone}`}
-              className="flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-semibold text-medical-blue border-2 border-medical-blue/20 hover:bg-sky-50 transition-all duration-200"
+              className={`flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-semibold border-2 transition-all duration-200 ${
+                onHero
+                  ? 'text-sky-100 border-white/15 bg-white/5 hover:text-white hover:bg-white/12'
+                  : 'text-medical-blue border-medical-blue/20 hover:bg-sky-50'
+              }`}
             >
               <Phone size={14} />
               {brand.phoneDisplay}
@@ -100,7 +120,9 @@ export default function Navbar() {
 
           {/* Mobile menu toggle */}
           <button
-            className="lg:hidden p-2 rounded-xl hover:bg-slate-100 transition-colors text-slate-700"
+            className={`lg:hidden p-2 rounded-xl transition-colors ${
+              onHero ? 'text-white hover:bg-white/10' : 'text-slate-700 hover:bg-slate-100'
+            }`}
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
