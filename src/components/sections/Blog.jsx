@@ -30,7 +30,7 @@ export default function Blog() {
             Health Blog
           </h2>
           <p className="text-slate-500 mt-3 max-w-lg mx-auto text-sm">
-            Insights, tips, and awareness articles from Dr Arunav Garg to help you better understand neurological health.
+            Insights, tips, and awareness articles from Dr Arunav to help you better understand neurological health.
           </p>
         </ScrollReveal>
 

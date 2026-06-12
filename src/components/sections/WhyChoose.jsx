@@ -25,7 +25,7 @@ export default function WhyChoose() {
     <section
       id="why-us"
       className="py-24"
-      aria-label="Why choose Dr Arunav Garg"
+      aria-label="Why choose Dr Arunav"
     >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
@@ -38,7 +38,7 @@ export default function WhyChoose() {
               </span>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-medical-blue leading-tight mt-1">
                 Why Choose<br />
-                <span className="text-gradient">Dr Arunav Garg?</span>
+                <span className="text-gradient">Dr Arunav?</span>
               </h2>
               <p className="text-slate-500 mt-4 text-sm leading-relaxed max-w-md">
                 A decade of dedicated neurological expertise combined with a patient-first approach that makes complex care feel clear and accessible.
@@ -134,7 +134,7 @@ export default function WhyChoose() {
               >
                 <h3 className="font-display font-bold text-lg">Not sure if you need a neurologist?</h3>
                 <p className="text-sky-100 text-sm mt-1 mb-4">
-                  Get a prompt consultation and let Dr Garg evaluate your symptoms.
+                  Get a prompt consultation and let Dr Arunav evaluate your symptoms.
                 </p>
                 <button
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

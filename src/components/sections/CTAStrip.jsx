@@ -47,7 +47,7 @@ export default function CTAStrip() {
             Need Neurology Consultation?
           </h2>
           <p className="text-sky-100/70 text-base mt-4 max-w-xl mx-auto">
-            Book your appointment with Dr Arunav Garg today. Prompt, accurate, and patient-friendly neurological care.
+            Book your appointment with Dr Arunav today. Prompt, accurate, and patient-friendly neurological care.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8">

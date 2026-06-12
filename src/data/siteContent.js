@@ -3,22 +3,22 @@
 // ─────────────────────────────────────────────
 
 export const brand = {
-  name: 'Dr Arunav Garg',
+  name: 'Dr Arunav',
   tagline: 'Neurologist',
   domain: 'drarunavgarg.com',
   phone: '7678585127',
   phoneDisplay: '+91 76785 85127',
   email: 'drarunavgarg@gmail.com',
-  whatsappMessage: 'Hello Dr Arunav Garg, I want to book a neurology consultation.',
+  whatsappMessage: 'Hello Dr Arunav, I want to book a neurology consultation.',
   mapLink: 'https://share.google/aCoRxyrAdJOeHmY3y',
   mapEmbed:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.4!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zDr+Arunav+Garg+Neurology!5e0!3m2!1sen!2sin!4v1234567890',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.4!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zDr+Arunav+Neurology!5e0!3m2!1sen!2sin!4v1234567890',
 }
 
 export const hero = {
   eyebrow: 'Trusted Neurology Care',
   headline: 'Expert Neurology Care',
-  headlineAccent: 'by Dr Arunav Garg',
+  headlineAccent: 'by Dr Arunav',
   subheadline:
     '10+ Years of Experience in Treating Brain, Nerve & Neurological Disorders. Evidence-based diagnosis and patient-centred treatment you can trust.',
   stats: [
@@ -31,10 +31,10 @@ export const hero = {
 
 export const about = {
   eyebrow: 'About the Doctor',
-  heading: 'About Dr Arunav Garg',
+  heading: 'About Dr Arunav',
   paragraphs: [
-    'Dr Arunav Garg is an experienced neurologist with over 10 years of medical expertise, providing accurate diagnosis and comprehensive treatment for brain, nerve, spine, and neurological disorders.',
-    'He is known for patient-friendly consultations, clear explanations, and evidence-based treatment planning. Dr Garg combines advanced diagnostic techniques with compassionate care to deliver outcomes that truly matter.',
+    'Dr Arunav is an experienced neurologist with over 10 years of medical expertise, providing accurate diagnosis and comprehensive treatment for brain, nerve, spine, and neurological disorders.',
+    'He is known for patient-friendly consultations, clear explanations, and evidence-based treatment planning. Dr Arunav combines advanced diagnostic techniques with compassionate care to deliver outcomes that truly matter.',
   ],
   highlights: [
     { icon: 'Award', label: '10+ Years Experience', desc: 'Clinical excellence across neurology' },
@@ -149,7 +149,7 @@ export const testimonials = [
     name: 'Priya Sharma',
     location: 'Delhi',
     rating: 5,
-    text: 'Dr Garg diagnosed my migraine condition accurately after years of suffering. His treatment plan has dramatically reduced my episodes. Highly recommend!',
+    text: 'Dr Arunav diagnosed my migraine condition accurately after years of suffering. His treatment plan has dramatically reduced my episodes. Highly recommend!',
     condition: 'Chronic Migraine',
     initials: 'PS',
   },
@@ -158,7 +158,7 @@ export const testimonials = [
     name: 'Rajesh Kumar',
     location: 'Noida',
     rating: 5,
-    text: 'My father had a stroke and Dr Garg\'s quick evaluation and treatment plan made all the difference. Very professional and compassionate doctor.',
+    text: 'My father had a stroke and Dr Arunav\'s quick evaluation and treatment plan made all the difference. Very professional and compassionate doctor.',
     condition: 'Stroke Recovery',
     initials: 'RK',
   },
@@ -167,7 +167,7 @@ export const testimonials = [
     name: 'Anita Verma',
     location: 'Gurgaon',
     rating: 5,
-    text: 'Suffering from vertigo for months, Dr Garg\'s diagnosis was spot-on. Within weeks of treatment I was back to normal life. Exceptional doctor!',
+    text: 'Suffering from vertigo for months, Dr Arunav\'s diagnosis was spot-on. Within weeks of treatment I was back to normal life. Exceptional doctor!',
     condition: 'Vertigo Treatment',
     initials: 'AV',
   },
@@ -176,7 +176,7 @@ export const testimonials = [
     name: 'Suresh Patel',
     location: 'Faridabad',
     rating: 5,
-    text: 'My son has epilepsy and Dr Garg has been managing his care brilliantly. His patience in explaining the treatment plan gave our family great confidence.',
+    text: 'My son has epilepsy and Dr Arunav has been managing his care brilliantly. His patience in explaining the treatment plan gave our family great confidence.',
     condition: 'Epilepsy Management',
     initials: 'SP',
   },
@@ -184,8 +184,8 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: 'What conditions does Dr Arunav Garg treat?',
-    a: 'Dr Garg treats a wide range of neurological conditions including migraine, epilepsy, stroke, vertigo, Parkinson\'s disease, dementia, neuropathy, multiple sclerosis, and neuromuscular disorders.',
+    q: 'What conditions does Dr Arunav treat?',
+    a: 'Dr Arunav treats a wide range of neurological conditions including migraine, epilepsy, stroke, vertigo, Parkinson\'s disease, dementia, neuropathy, multiple sclerosis, and neuromuscular disorders.',
   },
   {
     q: 'How do I book an appointment?',
@@ -205,7 +205,7 @@ export const faqs = [
   },
   {
     q: 'Should I bring previous medical reports to the consultation?',
-    a: 'Yes, please bring any previous reports, MRI/CT scans, blood test results, and a list of current medications. This helps Dr Garg provide a thorough and accurate assessment.',
+    a: 'Yes, please bring any previous reports, MRI/CT scans, blood test results, and a list of current medications. This helps Dr Arunav provide a thorough and accurate assessment.',
   },
 ]
 

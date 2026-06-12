@@ -41,7 +41,7 @@ export default function About() {
                 >
                   <img
                     src={doctorImg}
-                    alt="Dr Arunav Garg — Neurologist"
+                    alt="Dr Arunav — Neurologist"
                     className="w-72 sm:w-80 lg:w-96 rounded-[2rem] object-cover"
                     loading="lazy"
                   />

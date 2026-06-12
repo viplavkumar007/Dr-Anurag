@@ -1,6 +1,6 @@
-# Dr Arunav Garg — Neurologist Website
+# Dr Arunav — Neurologist Website
 
-Premium, responsive single-page React website for Dr Arunav Garg, Neurologist.
+Premium, responsive single-page React website for Dr Arunav, Neurologist.
 
 ---
 
@@ -69,7 +69,7 @@ Or drag-and-drop the `dist/` folder directly in Netlify dashboard.
 ## Project Structure
 
 ```
-dr-arunav-garg/
+dr-arunav/
 ├── public/
 ├── src/
 │   ├── assets/

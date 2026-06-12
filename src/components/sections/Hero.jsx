@@ -198,7 +198,7 @@ export default function Hero() {
                 >
                   <img
                     src={doctorImg}
-                    alt="Dr Arunav Garg — Neurologist"
+                    alt="Dr Arunav — Neurologist"
                     className="w-72 h-72 sm:w-80 sm:h-80 lg:w-[380px] lg:h-[380px] rounded-full object-cover"
                     style={{
                       boxShadow: '0 8px 48px rgba(14,165,233,0.3)',
