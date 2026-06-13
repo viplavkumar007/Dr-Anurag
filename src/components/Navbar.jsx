@@ -6,6 +6,7 @@ import { useScrollBlur } from '../hooks/useScrollBlur'
 import { useScrollSpy } from '../hooks/useScrollSpy'
 
 const NAV_LINKS = [
+  { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
   { id: 'gallery', label: 'Gallery' },

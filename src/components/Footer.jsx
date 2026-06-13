@@ -1,4 +1,4 @@
-import { Brain, Phone, Mail, MapPin, MessageCircle, ExternalLink } from 'lucide-react'
+import { Brain, Phone, Mail, MapPin, MessageCircle, ExternalLink, Instagram, Youtube } from 'lucide-react'
 import { brand } from '../data/siteContent'
 
 const QUICK_LINKS = [
@@ -87,6 +87,12 @@ export default function Footer() {
               <a href={brand.mapLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sky-300/80 hover:text-sky-300 text-xs transition-colors">
                 <MapPin size={12} /> Get Directions <ExternalLink size={10} />
               </a>
+              <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sky-300/80 hover:text-pink-300 text-xs transition-colors">
+                <Instagram size={12} /> Instagram <ExternalLink size={10} />
+              </a>
+              <a href={brand.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sky-300/80 hover:text-red-300 text-xs transition-colors">
+                <Youtube size={12} /> YouTube <ExternalLink size={10} />
+              </a>
             </div>
           </div>
 
@@ -164,6 +170,32 @@ export default function Footer() {
                 }}
               >
                 <Mail size={13} /> Email Doctor
+              </a>
+              <a
+                href={brand.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-white text-xs font-semibold"
+                style={{
+                  background: 'rgba(225,48,108,0.15)',
+                  border: '1px solid rgba(225,48,108,0.28)',
+                  transition: 'all 0.2s',
+                }}
+              >
+                <Instagram size={13} /> Instagram
+              </a>
+              <a
+                href={brand.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-2xl text-white text-xs font-semibold"
+                style={{
+                  background: 'rgba(255,0,51,0.15)',
+                  border: '1px solid rgba(255,0,51,0.28)',
+                  transition: 'all 0.2s',
+                }}
+              >
+                <Youtube size={13} /> YouTube
               </a>
             </div>
           </div>

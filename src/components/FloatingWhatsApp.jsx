@@ -1,4 +1,5 @@
 import { brand } from '../data/siteContent'
+import { Instagram, Youtube } from 'lucide-react'
 
 function WhatsAppLogo() {
   return (
@@ -22,15 +23,37 @@ export default function FloatingWhatsApp() {
   const waUrl = `https://wa.me/91${brand.phone}?text=${encodeURIComponent(brand.whatsappMessage)}`
 
   return (
-    <a
-      href={waUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="float-wa"
-      aria-label="Chat on WhatsApp"
-      title="Chat on WhatsApp"
-    >
-      <WhatsAppLogo />
-    </a>
+    <div className="float-social" aria-label="Quick contact links">
+      <a
+        href={brand.youtube}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="float-youtube"
+        aria-label="Subscribe to Dr Arunav on YouTube"
+        title="YouTube"
+      >
+        <Youtube size={30} strokeWidth={2.4} />
+      </a>
+      <a
+        href={brand.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="float-insta"
+        aria-label="Follow Dr Arunav on Instagram"
+        title="Instagram"
+      >
+        <Instagram size={28} strokeWidth={2.4} />
+      </a>
+      <a
+        href={waUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="float-wa"
+        aria-label="Chat on WhatsApp"
+        title="Chat on WhatsApp"
+      >
+        <WhatsAppLogo />
+      </a>
+    </div>
   )
 }

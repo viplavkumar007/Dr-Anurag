@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Phone, MessageCircle, CalendarCheck, Star, ArrowDown } from 'lucide-react'
+import { Phone, MessageCircle, CalendarCheck, Star, ArrowDown, Instagram, Youtube } from 'lucide-react'
 import { brand, hero } from '../../data/siteContent'
 import doctorImg from '../../assets/doctor.jpeg'
 
@@ -89,7 +89,7 @@ export default function Hero() {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div variants={item} className="flex flex-wrap gap-3">
+            <motion.div variants={item} className="flex flex-wrap items-center gap-3">
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-semibold text-white text-sm"
@@ -107,25 +107,35 @@ export default function Hero() {
 
               <a
                 href={`tel:${brand.phone}`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-semibold text-white text-sm"
+                className="inline-flex h-14 w-14 items-center justify-center rounded-full text-white"
+                aria-label={`Call ${brand.phoneDisplay}`}
+                title="Call Now"
                 style={{
                   background: 'rgba(255,255,255,0.12)',
                   border: '1.5px solid rgba(255,255,255,0.25)',
                   backdropFilter: 'blur(8px)',
+                  boxShadow: '0 4px 18px rgba(255,255,255,0.12)',
                   transition: 'all 0.25s',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
-                onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.12)')}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.2)'
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.12)'
+                  e.currentTarget.style.transform = 'translateY(0)'
+                }}
               >
-                <Phone size={16} />
-                Call Now
+                <Phone size={22} />
               </a>
 
               <a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-semibold text-white text-sm"
+                className="inline-flex h-14 w-14 items-center justify-center rounded-full text-white"
+                aria-label="Chat on WhatsApp"
+                title="WhatsApp"
                 style={{
                   background: 'linear-gradient(135deg, #128c7e 0%, #25d366 100%)',
                   boxShadow: '0 4px 20px rgba(37,211,102,0.35)',
@@ -134,8 +144,43 @@ export default function Hero() {
                 onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
               >
-                <MessageCircle size={16} />
-                WhatsApp
+                <MessageCircle size={22} />
+              </a>
+
+              <a
+                href={brand.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-14 w-14 items-center justify-center rounded-full text-white"
+                aria-label="Open Dr Arunav's YouTube channel"
+                title="YouTube"
+                style={{
+                  background: 'linear-gradient(135deg, #ff0033 0%, #cc0000 100%)',
+                  boxShadow: '0 4px 20px rgba(255,0,51,0.35)',
+                  transition: 'all 0.25s',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+              >
+                <Youtube size={24} />
+              </a>
+
+              <a
+                href={brand.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-14 w-14 items-center justify-center rounded-full text-white"
+                aria-label="Open Dr Arunav's Instagram"
+                title="Instagram"
+                style={{
+                  background: 'linear-gradient(135deg, #833ab4 0%, #e1306c 48%, #f77737 100%)',
+                  boxShadow: '0 4px 20px rgba(225,48,108,0.35)',
+                  transition: 'all 0.25s',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+              >
+                <Instagram size={22} />
               </a>
             </motion.div>
 

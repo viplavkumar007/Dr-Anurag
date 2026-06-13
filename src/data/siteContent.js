@@ -9,6 +9,8 @@ export const brand = {
   phone: '7678585127',
   phoneDisplay: '+91 76785 85127',
   email: 'drarunavgarg@gmail.com',
+  instagram: 'https://www.instagram.com/neurobeast_drarunav?igsh=MW5tNXYzYXR6OTU1bw==',
+  youtube: 'https://youtube.com/@drarunavgarg?si=JKXUdmD54fp2m4He',
   whatsappMessage: 'Hello Dr Arunav, I want to book a neurology consultation.',
   mapLink: 'https://share.google/aCoRxyrAdJOeHmY3y',
   mapEmbed:
@@ -270,6 +272,8 @@ export const contact = {
   phone: brand.phone,
   phoneDisplay: brand.phoneDisplay,
   email: brand.email,
+  instagram: brand.instagram,
+  youtube: brand.youtube,
   mapLink: brand.mapLink,
   services: services.map((s) => s.title),
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, MessageCircle, Send, Loader2 } from 'lucide-react'
+import { Phone, Mail, MapPin, MessageCircle, Send, Loader2, Instagram, Youtube } from 'lucide-react'
 import { brand, contact } from '../../data/siteContent'
 import ScrollReveal from '../ui/ScrollReveal'
 
@@ -101,6 +101,22 @@ export default function Contact({ addToast }) {
                   href: `mailto:${brand.email}`,
                   color: 'from-amber-400/20 to-orange-400/15',
                   iconColor: 'text-amber-600',
+                },
+                {
+                  icon: Instagram,
+                  label: 'Instagram',
+                  value: '@neurobeast_drarunav',
+                  href: brand.instagram,
+                  color: 'from-pink-400/20 to-orange-400/15',
+                  iconColor: 'text-pink-600',
+                },
+                {
+                  icon: Youtube,
+                  label: 'YouTube',
+                  value: '@drarunavgarg',
+                  href: brand.youtube,
+                  color: 'from-red-400/20 to-rose-400/15',
+                  iconColor: 'text-red-600',
                 },
                 {
                   icon: MapPin,

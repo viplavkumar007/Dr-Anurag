@@ -126,14 +126,31 @@
   }
 
   /* ── Floating WhatsApp ── */
+  .float-social {
+    @apply fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3;
+  }
+  .float-wa,
+  .float-insta,
+  .float-youtube {
+    @apply flex items-center justify-center w-14 h-14 rounded-full text-white shadow-lg;
+    transition: transform 0.2s;
+  }
   .float-wa {
-    @apply fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full text-white shadow-lg;
     background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
     box-shadow: 0 4px 20px rgba(37,211,102,0.5);
     animation: pulse_glow 2.5s ease-in-out infinite;
-    transition: transform 0.2s;
   }
-  .float-wa:hover { transform: scale(1.1); }
+  .float-insta {
+    background: linear-gradient(135deg, #833ab4 0%, #e1306c 48%, #f77737 100%);
+    box-shadow: 0 4px 20px rgba(225,48,108,0.42);
+  }
+  .float-youtube {
+    background: linear-gradient(135deg, #ff0033 0%, #cc0000 100%);
+    box-shadow: 0 4px 20px rgba(255,0,51,0.42);
+  }
+  .float-wa:hover,
+  .float-insta:hover,
+  .float-youtube:hover { transform: scale(1.1); }
 }
 
 @layer utilities {

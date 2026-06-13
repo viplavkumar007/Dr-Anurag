@@ -1,34 +1,76 @@
 import { motion } from 'framer-motion'
-import { Camera, Brain, Activity, ScanLine } from 'lucide-react'
+import { Camera, Users, Stethoscope, Presentation, Globe2, HeartHandshake } from 'lucide-react'
 import ScrollReveal from '../ui/ScrollReveal'
-import migraineConsultation from '../../assets/gallery-migraine-consultation.png'
-import neuroDiagnostics from '../../assets/gallery-neuro-diagnostics.png'
-import strokeReview from '../../assets/gallery-stroke-review.png'
-import movementCare from '../../assets/gallery-movement-care.png'
+import clinicReview from '../../assets/gallery-01-clinic-review.jpeg'
+import conferenceGroup from '../../assets/gallery-02-conference-group.jpeg'
+import ihcSpeaker from '../../assets/gallery-03-ihc-speaker.jpeg'
+import neurotechDemo from '../../assets/gallery-04-neurotech-demo.jpeg'
+import saoPaulo from '../../assets/gallery-05-sao-paulo.jpeg'
+import medicalMural from '../../assets/gallery-06-medical-mural.jpeg'
+import hospitalCare from '../../assets/gallery-07-hospital-care.jpeg'
+import patientCare from '../../assets/gallery-08-patient-care.jpeg'
+import academicSession from '../../assets/gallery-09-academic-session.jpeg'
+import investigatorMeeting from '../../assets/gallery-10-investigator-meeting.jpeg'
 
 const galleryItems = [
   {
-    title: 'Headache & Migraine Care',
-    desc: 'Focused consultation for recurring headaches and migraine patterns.',
-    image: migraineConsultation,
-    icon: Brain,
+    title: 'Clinical Review',
+    desc: 'Focused case review and treatment planning in clinic.',
+    image: clinicReview,
+    icon: Stethoscope,
   },
   {
-    title: 'EEG, EMG & NCV Testing',
-    desc: 'Modern diagnostic support for brain, muscle, and nerve function.',
-    image: neuroDiagnostics,
-    icon: ScanLine,
+    title: 'International Conference',
+    desc: 'Professional exchange with global neurology peers.',
+    image: conferenceGroup,
+    icon: Users,
   },
   {
-    title: 'Stroke Evaluation',
-    desc: 'Timely neurological review and prevention-focused planning.',
-    image: strokeReview,
-    icon: Activity,
+    title: 'IHC 2025',
+    desc: 'Academic participation at the International Headache Congress.',
+    image: ihcSpeaker,
+    icon: Presentation,
   },
   {
-    title: 'Movement Disorder Care',
-    desc: 'Supportive management for tremors, Parkinsonian symptoms, and balance.',
-    image: movementCare,
+    title: 'Neurotechnology Demo',
+    desc: 'Exploring patient-focused innovation in neurological care.',
+    image: neurotechDemo,
+    icon: Camera,
+  },
+  {
+    title: 'Sao Paulo Visit',
+    desc: 'Representing neurology practice at an international venue.',
+    image: saoPaulo,
+    icon: Globe2,
+  },
+  {
+    title: 'Medical Travel',
+    desc: 'Learning and collaboration beyond the clinic.',
+    image: medicalMural,
+    icon: Globe2,
+  },
+  {
+    title: 'Hospital Care',
+    desc: 'Hands-on neurological assessment in the hospital setting.',
+    image: hospitalCare,
+    icon: HeartHandshake,
+  },
+  {
+    title: 'Patient Interaction',
+    desc: 'Compassionate bedside care and clear communication.',
+    image: patientCare,
+    icon: HeartHandshake,
+  },
+  {
+    title: 'Academic Session',
+    desc: 'Continuing medical education and specialist collaboration.',
+    image: academicSession,
+    icon: Presentation,
+  },
+  {
+    title: 'Investigator Meeting',
+    desc: 'Clinical research discussion with international colleagues.',
+    image: investigatorMeeting,
     icon: Camera,
   },
 ]
@@ -53,10 +95,10 @@ export default function Gallery() {
             <span className="w-6 h-px bg-medical-sky inline-block" />
           </span>
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-medical-blue leading-tight mt-1">
-            Services in Focus
+            Clinical & Academic Moments
           </h2>
           <p className="text-slate-500 mt-3 max-w-xl mx-auto text-sm lg:text-base">
-            A visual look at consultation, diagnostic testing, stroke review, and movement disorder care.
+            A visual look at patient care, conferences, academic sessions, and professional milestones.
           </p>
         </ScrollReveal>
 
@@ -64,7 +106,7 @@ export default function Gallery() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.12 }}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5"
+          className="grid grid-cols-1 items-start gap-5 md:grid-cols-2 xl:grid-cols-3"
         >
           {galleryItems.map((item) => {
             const Icon = item.icon
@@ -72,24 +114,25 @@ export default function Gallery() {
               <motion.article
                 key={item.title}
                 variants={cardVariants}
-                className="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+                className="group self-start overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-medical-light">
+                <div className="bg-slate-50 p-2">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-auto w-full rounded-2xl object-contain"
                     loading="lazy"
                   />
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-900/70 to-transparent" />
-                  <div className="absolute left-4 bottom-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white/90 text-medical-sky shadow-card backdrop-blur">
-                    <Icon size={19} strokeWidth={1.8} />
-                  </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-medical-blue text-base leading-snug">
-                    {item.title}
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sky-50 text-medical-sky">
+                      <Icon size={19} strokeWidth={1.8} />
+                    </div>
+                    <h3 className="font-semibold text-medical-blue text-base leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
                   <p className="mt-2 text-sm leading-relaxed text-slate-500">
                     {item.desc}
                   </p>
