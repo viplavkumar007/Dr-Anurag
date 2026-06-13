@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Award, Brain, Heart, Microscope, CheckCircle, Maximize2, X } from 'lucide-react'
+import { Award, Brain, Heart, Microscope, CheckCircle } from 'lucide-react'
 import { about } from '../../data/siteContent'
 import doctorImg from '../../assets/doctor.jpeg'
-import awardImg from '../../assets/award-gb-pant-neurology.jpeg'
 import ScrollReveal from '../ui/ScrollReveal'
 
 const iconMap = { Award, Brain, Heart, Microscope }
@@ -18,8 +16,6 @@ const cardVariants = {
 }
 
 export default function About() {
-  const [isAwardOpen, setIsAwardOpen] = useState(false)
-
   return (
     <section id="about" className="py-24 bg-white bg-medical-pattern" aria-label="About">
       <div className="section-container">
@@ -98,7 +94,7 @@ export default function About() {
             {/* Checklist */}
             <ScrollReveal delay={0.15}>
               <div className="flex flex-col gap-2">
-                {['MBBS, MD, DM (Neurology)', 'Senior Consultant Neurologist', 'Evidence-Based Treatment Protocols', 'Teleconsultation Available'].map((item) => (
+                {['MBBS, MD, DM (Neurology)', 'MRCP (UK) SCE', 'Senior Consultant Neurologist', 'Evidence-Based Treatment Protocols', 'Teleconsultation Available'].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <div
                       className="flex items-center justify-center w-5 h-5 rounded-full shrink-0"
@@ -109,36 +105,6 @@ export default function About() {
                     <span className="text-slate-700 text-sm font-medium">{item}</span>
                   </div>
                 ))}
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div
-                className="group relative mt-1 overflow-hidden rounded-2xl border border-amber-200/80 bg-white lg:-ml-6 lg:w-[calc(100%+1.5rem)]"
-                style={{ boxShadow: '0 12px 36px rgba(26,60,110,0.12)' }}
-              >
-                <button
-                  type="button"
-                  onClick={() => setIsAwardOpen(true)}
-                  className="block w-full cursor-zoom-in"
-                  aria-label="View award image larger"
-                >
-                  <img
-                    src={awardImg}
-                    alt="G B Pant Neurology Alumni Meet commendation awarded to Dr Arunav Garg"
-                    className="h-auto w-full max-h-[560px] object-contain bg-slate-50"
-                    loading="lazy"
-                  />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setIsAwardOpen(true)}
-                  className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-medical-blue shadow-lg transition group-hover:scale-105"
-                  aria-label="Expand award image"
-                  title="Expand"
-                >
-                  <Maximize2 size={18} />
-                </button>
               </div>
             </ScrollReveal>
 
@@ -181,37 +147,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      {isAwardOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[220] flex items-center justify-center bg-slate-950/85 p-4 backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Award image preview"
-          onClick={() => setIsAwardOpen(false)}
-        >
-          <button
-            type="button"
-            onClick={() => setIsAwardOpen(false)}
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-medical-blue shadow-xl transition hover:scale-105"
-            aria-label="Close award image preview"
-            title="Close"
-          >
-            <X size={22} />
-          </button>
-          <motion.img
-            src={awardImg}
-            alt="G B Pant Neurology Alumni Meet commendation awarded to Dr Arunav Garg"
-            initial={{ scale: 0.96, y: 12 }}
-            animate={{ scale: 1, y: 0 }}
-            className="max-h-[90vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </motion.div>
-      )}
     </section>
   )
 }

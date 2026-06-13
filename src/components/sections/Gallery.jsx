@@ -11,6 +11,7 @@ import hospitalCare from '../../assets/gallery-07-hospital-care.jpeg'
 import patientCare from '../../assets/gallery-08-patient-care.jpeg'
 import academicSession from '../../assets/gallery-09-academic-session.jpeg'
 import investigatorMeeting from '../../assets/gallery-10-investigator-meeting.jpeg'
+import awardImg from '../../assets/award-gb-pant-neurology.jpeg'
 
 const galleryItems = [
   {
@@ -73,6 +74,12 @@ const galleryItems = [
     image: investigatorMeeting,
     icon: Camera,
   },
+  {
+    title: 'Neurology Recognition',
+    desc: 'G B Pant Neurology Alumni Meet commendation and professional milestone.',
+    image: awardImg,
+    icon: Presentation,
+  },
 ]
 
 const cardVariants = {
@@ -116,11 +123,11 @@ export default function Gallery() {
                 variants={cardVariants}
                 className="group self-start overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
               >
-                <div className="bg-slate-50 p-2">
+                <div className="flex h-72 items-center justify-center bg-slate-50 p-3 sm:h-80 lg:h-72 xl:h-80">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-auto w-full rounded-2xl object-contain"
+                    className="max-h-full max-w-full rounded-2xl object-contain"
                     loading="lazy"
                   />
                 </div>
